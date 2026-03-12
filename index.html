@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Diplomado en Inteligencia Artificial Aplicada a la Educación – EESPP Indoamérica. 400 horas, 25 créditos, certificación progresiva válida para MINEDU. Inicio 6 de Abril 2026." />
+  <title>Diplomado IA en Educación | EESPP Indoamérica 2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =========== NAVIGATION =========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="brand-logo">
+          <span class="logo-icon"><i class="fas fa-brain"></i></span>
+          <div class="brand-text">
+            <span class="logo-name">EESPP</span>
+            <span class="logo-sub">INDOAMÉRICA</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+
+        <li><a href="#modulos" class="nav-link">Módulos</a></li>
+        <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+        <li><a href="#inversion" class="nav-link">Inversión</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#docente" class="nav-link">Docente</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li>
+          <a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb"
+             class="btn-nav-cta" target="_blank" rel="noopener">
+            <i class="fas fa-rocket"></i> Inscríbete
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =========== HERO =========== -->
+  <section id="inicio" class="hero">
+    <canvas id="networkCanvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up delay-1">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Programa de Formación Continua · EESPP Indoamérica · 2026</span>
+      </div>
+
+      <h1 class="hero-title animate-fade-up delay-2">
+        <span class="title-label">Diplomado en</span>
+        <span class="title-main">Inteligencia Artificial</span>
+        <span class="title-accent">Aplicada a la Educación</span>
+      </h1>
+
+      <p class="hero-subtitle animate-fade-up delay-3">
+        Transformando la enseñanza y el aprendizaje con IA<br />
+        <em>Trujillo · La Libertad · Perú</em>
+      </p>
+
+      <div class="hero-tags animate-fade-up delay-4">
+        <span class="tag tag-cyan"><i class="fas fa-clock"></i> 400 Horas</span>
+        <span class="tag tag-orange"><i class="fas fa-medal"></i> 25 Créditos</span>
+        <span class="tag tag-purple"><i class="fas fa-laptop"></i> 100% Virtual</span>
+        <span class="tag tag-green"><i class="fas fa-certificate"></i> Válido MINEDU</span>
+      </div>
+
+      <div class="hero-cta animate-fade-up delay-5">
+        <a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb"
+           class="btn-primary" target="_blank" rel="noopener">
+          <i class="fas fa-rocket"></i> Inscríbete Ahora
+        </a>
+        <a href="#modulos" class="btn-secondary">
+          <i class="fas fa-book-open"></i> Ver Plan de Estudios
+        </a>
+      </div>
+
+      <div class="hero-dates animate-fade-up delay-6">
+        <div class="date-item">
+          <i class="fas fa-calendar-alt"></i>
+          <div><span>Inicio</span><strong>6 Abril, 2026</strong></div>
+        </div>
+        <div class="date-sep"></div>
+        <div class="date-item">
+          <i class="fas fa-calendar-check"></i>
+          <div><span>Término</span><strong>8 Mayo, 2026</strong></div>
+        </div>
+        <div class="date-sep"></div>
+        <div class="date-item">
+          <i class="fas fa-moon"></i>
+          <div><span>Horario</span><strong>7:30 – 9:30 pm</strong></div>
+        </div>
+      </div>
+
+      <!-- COUNTDOWN -->
+      <div class="hero-countdown animate-fade-up delay-6">
+        <p class="countdown-label"><i class="fas fa-hourglass-half"></i> Tiempo para el inicio del diplomado</p>
+        <div class="countdown-grid" id="countdown">
+          <div class="cd-box"><span class="cd-num" id="cd-days">--</span><span class="cd-unit">días</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span class="cd-num" id="cd-hours">--</span><span class="cd-unit">horas</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span class="cd-num" id="cd-minutes">--</span><span class="cd-unit">minutos</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><span class="cd-num" id="cd-seconds">--</span><span class="cd-unit">segundos</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Desliza para explorar</span>
+    </div>
+  </section>
+
+  <!-- =========== STATS BAR =========== -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon s1"><i class="fas fa-clock"></i></div>
+          <div class="stat-body">
+            <span class="stat-number" data-target="400">0</span>
+            <span class="stat-suffix">+</span>
+            <span class="stat-label">Horas Académicas</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon s2"><i class="fas fa-star"></i></div>
+          <div class="stat-body">
+            <span class="stat-number" data-target="25">0</span>
+            <span class="stat-suffix"></span>
+            <span class="stat-label">Créditos MINEDU</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon s3"><i class="fas fa-layer-group"></i></div>
+          <div class="stat-body">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-suffix"></span>
+            <span class="stat-label">Módulos Especializados</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon s4"><i class="fas fa-users"></i></div>
+          <div class="stat-body">
+            <span class="stat-number" data-target="50">0</span>
+            <span class="stat-suffix"></span>
+            <span class="stat-label">Cupos Disponibles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== BENEFITS =========== -->
+  <section id="beneficios" class="section benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Por qué elegirnos?</span>
+        <h2 class="section-title">Conoce nuestros <span class="gradient-text">Beneficios</span></h2>
+        <p class="section-sub">Formación de calidad con reconocimiento oficial para tu crecimiento profesional docente</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card anim-slide-up">
+          <div class="bc-icon ic-cyan"><i class="fas fa-certificate"></i></div>
+          <h3>Certificación Progresiva</h3>
+          <p>400 horas académicas. Válida para escalafón y ascensos MINEDU. Obtén tu certificado al completar cada módulo.</p>
+          <div class="bc-badge">Reconocido Oficialmente</div>
+        </div>
+        <div class="benefit-card anim-slide-up" style="animation-delay:.1s">
+          <div class="bc-icon ic-orange"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>Docentes Especialistas en Tecno-pedagogía</h3>
+          <p>Aprende con docentes especializados nacionales e internacionales en el uso pedagógico avanzado de la IA.</p>
+          <div class="bc-badge">Expertos Certificados</div>
+        </div>
+        <div class="benefit-card anim-slide-up" style="animation-delay:.2s">
+          <div class="bc-icon ic-purple"><i class="fas fa-award"></i></div>
+          <h3>Insignia Digital y Créditos</h3>
+          <p>25 créditos académicos oficiales e insignia digital verificable para tu portafolio profesional.</p>
+          <div class="bc-badge">25 Créditos Oficiales</div>
+        </div>
+        <div class="benefit-card anim-slide-up" style="animation-delay:.3s">
+          <div class="bc-icon ic-green"><i class="fas fa-network-wired"></i></div>
+          <h3>Red Docente Innovadora</h3>
+          <p>Acceso a comunidades de práctica y convenios con instituciones educativas innovadoras a nivel nacional.</p>
+          <div class="bc-badge">Comunidad Global</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT =========== -->
+  <section id="sobre" class="section about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left anim-slide-up">
+          <span class="section-tag">Sobre el Programa</span>
+          <h2 class="section-title">¿Por qué es <span class="gradient-text">urgente</span><br>capacitarse en IA?</h2>
+
+          <blockquote class="quote-block">
+            <i class="fas fa-quote-left"></i>
+            <p>"La inteligencia artificial no reemplazará a los docentes, pero los docentes que usen IA reemplazarán a aquellos que no lo hagan."</p>
+          </blockquote>
+
+          <div class="about-features">
+            <div class="af-item">
+              <div class="af-icon"><i class="fas fa-globe-americas"></i></div>
+              <div>
+                <h4>Transformación Digital Global</h4>
+                <p>La IA generativa está redefiniendo las metodologías de enseñanza-aprendizaje según la UNESCO y el Tec de Monterrey.</p>
+              </div>
+            </div>
+            <div class="af-item">
+              <div class="af-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Relevancia Regional</h4>
+                <p>El 78% de docentes encuestados en La Libertad expresaron necesitar capacitación en IA y el 85% reconoció competencias insuficientes.</p>
+              </div>
+            </div>
+            <div class="af-item">
+              <div class="af-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h4>Uso Ético y Responsable</h4>
+                <p>Aprende a identificar alucinaciones, sesgos algorítmicos y a aplicar la IA con criterio pedagógico y ético.</p>
+              </div>
+            </div>
+            <div class="af-item">
+              <div class="af-icon"><i class="fas fa-balance-scale"></i></div>
+              <div>
+                <h4>Marco Legal Sólido</h4>
+                <p>Respaldado por la Ley 30512 y los lineamientos del MINEDU para la formación continua docente en el Perú.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right anim-slide-up" style="animation-delay:.15s">
+          <div class="about-card">
+            <div class="ac-header">
+              <span class="ac-badge"><i class="fas fa-brain"></i> IA + Educación</span>
+            </div>
+            <div class="ac-directed">
+              <h4><i class="fas fa-users"></i> Dirigido a:</h4>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> Docentes de Educación Básica Regular</li>
+                <li><i class="fas fa-check-circle"></i> Docentes Universitarios</li>
+                <li><i class="fas fa-check-circle"></i> Directivos y Gestores Educativos</li>
+                <li><i class="fas fa-check-circle"></i> Estudiantes de Pedagogía</li>
+                <li><i class="fas fa-check-circle"></i> Comunidad Educativa en General</li>
+              </ul>
+            </div>
+            <div class="ac-chips">
+              <span><i class="fas fa-laptop"></i> 100% Virtual</span>
+              <span><i class="fas fa-calendar"></i> 6 Abr 2026</span>
+              <span><i class="fas fa-users"></i> 50 Cupos</span>
+              <span><i class="fas fa-clock"></i> 7:30–9:30 pm</span>
+            </div>
+          </div>
+
+          <div class="about-legal">
+            <h4><i class="fas fa-gavel"></i> Base Legal</h4>
+            <ul>
+              <li>Ley N° 28044 – Ley General de Educación</li>
+              <li>Ley N° 30512 – Ley de Institutos y Escuelas de Educación Superior</li>
+              <li>RM N° 312-2020-MINEDU – Licenciamiento EESPP Indoamérica</li>
+              <li>PEI al 2027 – EESPP "Indoamérica"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== MODULES =========== -->
+  <section id="modulos" class="section modules">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Plan de Estudios</span>
+        <h2 class="section-title">Nuestros <span class="gradient-text">5 Módulos</span></h2>
+        <p class="section-sub">Progresión lógica desde los fundamentos hasta la implementación práctica avanzada con IA</p>
+      </div>
+
+      <!-- Summary table -->
+      <div class="mod-summary anim-slide-up">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Módulo</th><th>Horas</th><th>Créditos</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="td-num m1">I</td><td>Fundamentos de IA para Educadores</td><td>100</td><td>6</td></tr>
+            <tr><td class="td-num m2">II</td><td>Diseño de Experiencias de Aprendizaje con IA</td><td>80</td><td>5</td></tr>
+            <tr><td class="td-num m3">III</td><td>Monitoreo del Progreso Estudiantil con IA</td><td>80</td><td>5</td></tr>
+            <tr><td class="td-num m4">IV</td><td>Agentes y Automatizaciones con IA</td><td>80</td><td>5</td></tr>
+            <tr><td class="td-num m5">V</td><td>Proyecto de Innovación Educativa con IA</td><td>60</td><td>4</td></tr>
+            <tr class="tr-total"><td colspan="2"><strong>TOTAL</strong></td><td><strong>400</strong></td><td><strong>25</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion">
+
+        <div class="acc-item anim-slide-up">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <div class="acc-num n1">I</div>
+            <div class="acc-title-wrap">
+              <span class="acc-week">Semana 1</span>
+              <h3>Fundamentos de IA para Educadores</h3>
+            </div>
+            <div class="acc-meta">
+              <span><i class="fas fa-clock"></i> 100 hrs</span>
+              <span><i class="fas fa-star"></i> 6 créditos</span>
+            </div>
+            <div class="acc-arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-inner">
+              <p>Establece los cimientos conceptuales para comprender la IA con énfasis en aplicaciones educativas. Explora la evolución histórica hasta los actuales modelos como ChatGPT, Claude y Gemini.</p>
+              <div class="acc-competencia">
+                <strong><i class="fas fa-bullseye"></i> Competencia:</strong>
+                <p>Comprende los fundamentos conceptuales, éticos y técnicos de la IA para aplicarlos de manera crítica y responsable en contextos educativos.</p>
+              </div>
+              <div class="acc-topics">
+                <h4><i class="fas fa-list"></i> Temas Clave:</h4>
+                <ul>
+                  <li><i class="fas fa-circle"></i> Historia y evolución de la IA: del test de Turing a los transformers</li>
+                  <li><i class="fas fa-circle"></i> Machine Learning y Deep Learning para educadores</li>
+                  <li><i class="fas fa-circle"></i> IA generativa y multimodal: ChatGPT, Claude, Gemini, Perplexity</li>
+                  <li><i class="fas fa-circle"></i> Ética de la IA: sesgos, privacidad, equidad y transparencia</li>
+                  <li><i class="fas fa-circle"></i> Marco de competencias UNESCO para docentes en IA</li>
+                  <li><i class="fas fa-circle"></i> Reducción de alucinaciones y uso responsable de IA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item anim-slide-up" style="animation-delay:.05s">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <div class="acc-num n2">II</div>
+            <div class="acc-title-wrap">
+              <span class="acc-week">Semana 2</span>
+              <h3>Diseño de Experiencias de Aprendizaje con IA</h3>
+            </div>
+            <div class="acc-meta">
+              <span><i class="fas fa-clock"></i> 80 hrs</span>
+              <span><i class="fas fa-star"></i> 5 créditos</span>
+            </div>
+            <div class="acc-arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-inner">
+              <p>Núcleo técnico del diplomado. Desarrolla habilidades avanzadas en prompt engineering con técnicas Chain-of-Thought, Tree of Thoughts y Few-Shot Learning aplicadas a contextos educativos.</p>
+              <div class="acc-competencia">
+                <strong><i class="fas fa-bullseye"></i> Competencia:</strong>
+                <p>Diseña experiencias de aprendizaje innovadoras y personalizadas aplicando principios de DUA que promuevan la inclusión y la equidad.</p>
+              </div>
+              <div class="acc-topics">
+                <h4><i class="fas fa-list"></i> Temas Clave:</h4>
+                <ul>
+                  <li><i class="fas fa-circle"></i> Prompt Engineering: básico, avanzado y Few-Shot Learning</li>
+                  <li><i class="fas fa-circle"></i> Chain-of-Thought y Tree of Thoughts para educación</li>
+                  <li><i class="fas fa-circle"></i> Diseño Universal para el Aprendizaje (DUA) con IA</li>
+                  <li><i class="fas fa-circle"></i> Creación de materiales: textos, imágenes, videos, podcasts</li>
+                  <li><i class="fas fa-circle"></i> Diseño de evaluaciones, rúbricas e instrumentos con IA</li>
+                  <li><i class="fas fa-circle"></i> Personalización del aprendizaje según estilos y necesidades</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item anim-slide-up" style="animation-delay:.1s">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <div class="acc-num n3">III</div>
+            <div class="acc-title-wrap">
+              <span class="acc-week">Semana 3</span>
+              <h3>Monitoreo del Progreso Estudiantil con IA</h3>
+            </div>
+            <div class="acc-meta">
+              <span><i class="fas fa-clock"></i> 80 hrs</span>
+              <span><i class="fas fa-star"></i> 5 créditos</span>
+            </div>
+            <div class="acc-arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-inner">
+              <p>Utiliza IA para monitorear, analizar y evaluar el progreso estudiantil. Integra Learning Analytics y análisis predictivo para decisiones pedagógicas informadas.</p>
+              <div class="acc-competencia">
+                <strong><i class="fas fa-bullseye"></i> Competencia:</strong>
+                <p>Utiliza herramientas de IA para monitorear sistemáticamente el progreso estudiantil, empleando datos para retroalimentación personalizada.</p>
+              </div>
+              <div class="acc-topics">
+                <h4><i class="fas fa-list"></i> Temas Clave:</h4>
+                <ul>
+                  <li><i class="fas fa-circle"></i> Learning Analytics: análisis de datos educativos</li>
+                  <li><i class="fas fa-circle"></i> Herramientas: Google Classroom IA, MagicSchool.ai, LogicBalls</li>
+                  <li><i class="fas fa-circle"></i> Evaluación formativa con retroalimentación automática adaptativa</li>
+                  <li><i class="fas fa-circle"></i> Análisis predictivo: predicción del rendimiento estudiantil</li>
+                  <li><i class="fas fa-circle"></i> Visualización de datos: dashboards educativos</li>
+                  <li><i class="fas fa-circle"></i> Privacidad y protección de datos estudiantiles</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item anim-slide-up" style="animation-delay:.15s">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <div class="acc-num n4">IV</div>
+            <div class="acc-title-wrap">
+              <span class="acc-week">Semana 4</span>
+              <h3>Agentes y Automatizaciones con IA</h3>
+            </div>
+            <div class="acc-meta">
+              <span><i class="fas fa-clock"></i> 80 hrs</span>
+              <span><i class="fas fa-star"></i> 5 créditos</span>
+            </div>
+            <div class="acc-arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-inner">
+              <p>Configura y utiliza agentes de IA para automatizar tareas administrativas y pedagógicas, optimizando el tiempo docente y mejorando la eficiencia educativa.</p>
+              <div class="acc-competencia">
+                <strong><i class="fas fa-bullseye"></i> Competencia:</strong>
+                <p>Configura y utiliza agentes de IA para automatizar tareas pedagógicas y administrativas, optimizando el tiempo docente.</p>
+              </div>
+              <div class="acc-topics">
+                <h4><i class="fas fa-list"></i> Temas Clave:</h4>
+                <ul>
+                  <li><i class="fas fa-circle"></i> Fundamentos de agentes IA vs chatbots tradicionales</li>
+                  <li><i class="fas fa-circle"></i> Plataformas: Gemini Gems, NotebookLM, Grok, Custom GPTs, Perplexity Spaces</li>
+                  <li><i class="fas fa-circle"></i> Tipos: planificadores, correctores, tutores, documentales, creadores</li>
+                  <li><i class="fas fa-circle"></i> Diseño de prompts base efectivos para agentes</li>
+                  <li><i class="fas fa-circle"></i> Automatización de flujos de trabajo docentes</li>
+                  <li><i class="fas fa-circle"></i> Ingeniería de micropasos para tareas complejas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item anim-slide-up" style="animation-delay:.2s">
+          <div class="acc-header" onclick="toggleAcc(this)">
+            <div class="acc-num n5">V</div>
+            <div class="acc-title-wrap">
+              <span class="acc-week">Semana 5</span>
+              <h3>Proyecto de Innovación Educativa con IA</h3>
+            </div>
+            <div class="acc-meta">
+              <span><i class="fas fa-clock"></i> 60 hrs</span>
+              <span><i class="fas fa-star"></i> 4 créditos</span>
+            </div>
+            <div class="acc-arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <div class="acc-body">
+            <div class="acc-inner">
+              <p>Diseña, implementa y evalúa un proyecto de innovación educativa integrando IA de forma reflexiva y creativa con evidencias de impacto real en el aprendizaje.</p>
+              <div class="acc-competencia">
+                <strong><i class="fas fa-bullseye"></i> Competencia:</strong>
+                <p>Diseña, implementa y evalúa un proyecto de innovación educativa con IA, con propósito pedagógico claro y evidencias de impacto.</p>
+              </div>
+              <div class="acc-topics">
+                <h4><i class="fas fa-list"></i> Temas Clave:</h4>
+                <ul>
+                  <li><i class="fas fa-circle"></i> Design Thinking y ABP aplicado a innovación educativa con IA</li>
+                  <li><i class="fas fa-circle"></i> Chatbots educativos y sistemas de tutoría inteligente</li>
+                  <li><i class="fas fa-circle"></i> Plataformas de aprendizaje personalizado y evaluación adaptativa</li>
+                  <li><i class="fas fa-circle"></i> Gestión del cambio y liderazgo educativo digital</li>
+                  <li><i class="fas fa-circle"></i> Evaluación de impacto con indicadores cuali y cuantitativos</li>
+                  <li><i class="fas fa-circle"></i> Escalabilidad y sostenibilidad de proyectos de innovación con IA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /accordion -->
+    </div>
+  </section>
+
+  <!-- =========== METHODOLOGY =========== -->
+  <section id="metodologia" class="section methodology">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Cómo aprenderás?</span>
+        <h2 class="section-title">Metodología <span class="gradient-text">Híbrida Innovadora</span></h2>
+        <p class="section-sub">Aprenderás a usar IA mientras usas IA para aprender — una experiencia metacognitiva transformadora</p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-bars-card anim-slide-up">
+          <h3><i class="fas fa-chart-bar"></i> Distribución de Modalidades (400 horas)</h3>
+          <div class="bars">
+            <div class="bar-row">
+              <div class="bar-label-row">
+                <span><i class="fas fa-video"></i> Sesiones Sincrónicas</span>
+                <span>80 hrs · 20%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill c1" data-w="20"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label-row">
+                <span><i class="fas fa-robot"></i> Aprendizaje Autónomo con IA</span>
+                <span>120 hrs · 30%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill c2" data-w="30"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label-row">
+                <span><i class="fas fa-users"></i> Trabajo Colaborativo</span>
+                <span>60 hrs · 15%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill c3" data-w="15"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label-row">
+                <span><i class="fas fa-flask"></i> Práctica Aplicada</span>
+                <span>100 hrs · 25%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill c4" data-w="25"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label-row">
+                <span><i class="fas fa-clipboard-check"></i> Evaluaciones</span>
+                <span>40 hrs · 10%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill c5" data-w="10"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="method-features-card anim-slide-up" style="animation-delay:.15s">
+          <h3><i class="fas fa-lightbulb"></i> Características Distintivas</h3>
+          <div class="mf-list">
+            <div class="mf-item">
+              <div class="mf-icon"><i class="fas fa-code"></i></div>
+              <div>
+                <h4>Prompt Engineering Transversal</h4>
+                <p>Desarrolla un portafolio de prompts desde técnicas básicas hasta Chain-of-Thought avanzado en todos los módulos.</p>
+              </div>
+            </div>
+            <div class="mf-item">
+              <div class="mf-icon"><i class="fas fa-sitemap"></i></div>
+              <div>
+                <h4>Tree of Thoughts Educativo</h4>
+                <p>Metodología para resolver problemas educativos complejos explorando múltiples rutas de solución.</p>
+              </div>
+            </div>
+            <div class="mf-item">
+              <div class="mf-icon"><i class="fas fa-user-astronaut"></i></div>
+              <div>
+                <h4>Asistente IA Personalizado 24/7</h4>
+                <p>Configura tu propio Custom GPT con el contenido del diplomado como tutor disponible en cualquier momento.</p>
+              </div>
+            </div>
+            <div class="mf-item">
+              <div class="mf-icon"><i class="fas fa-chalkboard"></i></div>
+              <div>
+                <h4>Plataforma Office 365</h4>
+                <p>Enfoque crítico-reflexivo, constructivista y conectivista implementado en entorno Office 365.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== EVALUATION =========== -->
+  <section id="evaluacion" class="section evaluation">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sistema de Evaluación</span>
+        <h2 class="section-title">Evaluación <span class="gradient-text">Continua y Auténtica</span></h2>
+      </div>
+
+      <div class="eval-grid">
+        <div class="eval-card anim-slide-up">
+          <h3><i class="fas fa-chart-pie"></i> Componentes Evaluativos por Módulo</h3>
+          <div class="eval-items">
+            <div class="eval-row"><span class="pct p15">15%</span><div><strong>Participación en Sesiones</strong><p>Asistencia y contribuciones activas en clases sincrónicas</p></div></div>
+            <div class="eval-row"><span class="pct p20">20%</span><div><strong>Portafolio de Prompts</strong><p>Compilación de prompts con reflexión sobre su efectividad</p></div></div>
+            <div class="eval-row"><span class="pct p25">25%</span><div><strong>Productos de Aprendizaje</strong><p>Materiales educativos y diseños de sesión creados con IA</p></div></div>
+            <div class="eval-row"><span class="pct p20">20%</span><div><strong>Práctica Aplicada</strong><p>Implementación en contexto educativo real con informe reflexivo</p></div></div>
+            <div class="eval-row"><span class="pct p20">20%</span><div><strong>Evaluación Final de Módulo</strong><p>Demostración integradora de competencias del módulo</p></div></div>
+          </div>
+        </div>
+
+        <div class="eval-right">
+          <div class="scale-card anim-slide-up" style="animation-delay:.1s">
+            <h3><i class="fas fa-graduation-cap"></i> Escala de Calificaciones</h3>
+            <div class="scale-grid">
+              <div class="sc-item"><span class="sc-num">0–20</span><span>Escala Vigesimal</span></div>
+              <div class="sc-item"><span class="sc-num">≥ 13</span><span>Mínimo por módulo</span></div>
+              <div class="sc-item"><span class="sc-num">≥ 14</span><span>Promedio final</span></div>
+            </div>
+          </div>
+          <div class="ia-feedback-card anim-slide-up" style="animation-delay:.2s">
+            <div class="iaf-icon"><i class="fas fa-robot"></i></div>
+            <div>
+              <h4>Retroalimentación con IA</h4>
+              <p>Feedback inmediato sobre prompts y productos mediante IA, complementado con evaluación experta de docentes especialistas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CERTIFICATION =========== -->
+  <section id="certificacion" class="section certification">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reconocimiento Oficial</span>
+        <h2 class="section-title">Certificación <span class="gradient-text">Progresiva</span></h2>
+        <p class="section-sub">Obtén credenciales válidas al completar cada módulo. Reconocido por MINEDU para concursos y ascensos docentes.</p>
+      </div>
+
+      <div class="cert-timeline anim-slide-up">
+        <div class="ct-item">
+          <div class="ct-dot cd1">1</div>
+          <div class="ct-content">
+            <span class="ct-req">Módulo I</span>
+            <h4>Fundamentos de IA para Educadores</h4>
+            <span class="ct-credits"><i class="fas fa-star"></i> 6 créditos · 100 horas</span>
+          </div>
+        </div>
+        <div class="ct-line"></div>
+        <div class="ct-item">
+          <div class="ct-dot cd2">2</div>
+          <div class="ct-content">
+            <span class="ct-req">Módulos I + II</span>
+            <h4>Diseño de Experiencias de Aprendizaje con IA</h4>
+            <span class="ct-credits"><i class="fas fa-star"></i> 5 créditos · 80 horas</span>
+          </div>
+        </div>
+        <div class="ct-line"></div>
+        <div class="ct-item">
+          <div class="ct-dot cd3">3</div>
+          <div class="ct-content">
+            <span class="ct-req">Módulos I + II + III</span>
+            <h4>Monitoreo del Progreso Estudiantil con IA</h4>
+            <span class="ct-credits"><i class="fas fa-star"></i> 5 créditos · 80 horas</span>
+          </div>
+        </div>
+        <div class="ct-line"></div>
+        <div class="ct-item">
+          <div class="ct-dot cd4">4</div>
+          <div class="ct-content">
+            <span class="ct-req">Módulos I – IV</span>
+            <h4>Agentes y Automatizaciones con IA</h4>
+            <span class="ct-credits"><i class="fas fa-star"></i> 5 créditos · 80 horas</span>
+          </div>
+        </div>
+        <div class="ct-line"></div>
+        <div class="ct-item">
+          <div class="ct-dot cd5">5</div>
+          <div class="ct-content">
+            <span class="ct-req">Módulos I – V</span>
+            <h4>Proyecto de Innovación Educativa con IA</h4>
+            <span class="ct-credits"><i class="fas fa-star"></i> 4 créditos · 60 horas</span>
+          </div>
+        </div>
+        <div class="ct-line"></div>
+        <div class="ct-item ct-final">
+          <div class="ct-dot cd-final"><i class="fas fa-trophy"></i></div>
+          <div class="ct-content">
+            <span class="ct-req">Todos los módulos + Proyecto</span>
+            <h4>DIPLOMADO EN IA APLICADA A LA EDUCACIÓN</h4>
+            <span class="ct-credits ct-final-cred"><i class="fas fa-award"></i> 25 créditos · 400 horas · Reconocido MINEDU</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="minedu-banner anim-slide-up">
+        <i class="fas fa-award"></i>
+        <div>
+          <strong>CERTIFICACIÓN RECONOCIDA POR EL MINEDU</strong>
+          <span>25 Créditos | 400 Horas Académicas | Válido para concursos de contratación y ascensos docentes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FACULTY =========== -->
+  <section id="docente" class="section faculty">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Plana Docente</span>
+        <h2 class="section-title">Aprende con <span class="gradient-text">Expertos</span></h2>
+      </div>
+
+      <div class="faculty-main anim-slide-up">
+        <div class="faculty-avatar-wrap">
+          <div class="faculty-avatar">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="faculty-badge-wrap">
+            <span class="fb fb1"><i class="fas fa-microscope"></i> Renacyt</span>
+            <span class="fb fb2"><i class="fas fa-brain"></i> ATLAS.ti</span>
+          </div>
+        </div>
+        <div class="faculty-info">
+          <h3>Dr. Elier Nieto Rivas</h3>
+          <span class="faculty-role">Docente Investigador · Ponente Principal</span>
+          <div class="faculty-creds">
+            <div class="fc-item"><i class="fas fa-university"></i><span>Doctor en Educación – Universidad César Vallejo</span></div>
+            <div class="fc-item"><i class="fas fa-microscope"></i><span>Investigador certificado Renacyt – filUPAO</span></div>
+            <div class="fc-item"><i class="fas fa-clock"></i><span>15 años de experiencia en docencia universitaria</span></div>
+            <div class="fc-item"><i class="fas fa-robot"></i><span>Entrenador junior certificado por ATLAS.ti</span></div>
+            <div class="fc-item"><i class="fas fa-globe"></i><span>Trayectoria académica en Perú y Venezuela</span></div>
+          </div>
+          <p class="faculty-bio">Especializado en Pedagogía y TIC. Asesor de investigación con énfasis en competencias digitales, educación inclusiva y uso pedagógico de recursos tecnológicos. Publica artículos en revistas especializadas y participa en proyectos de educación superior orientados a la innovación educativa.</p>
+          <div class="faculty-tags">
+            <span>IA Educativa</span><span>Pedagogía Digital</span><span>Investigación</span><span>ATLAS.ti</span><span>TIC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="leadership-grid">
+        <div class="leader-card anim-slide-up">
+          <div class="lc-icon"><i class="fas fa-user-shield"></i></div>
+          <div><h4>Dr. Napoleon Carbajal Lavado</h4><span>Director General</span></div>
+        </div>
+        <div class="leader-card anim-slide-up" style="animation-delay:.05s">
+          <div class="lc-icon"><i class="fas fa-user-cog"></i></div>
+          <div><h4>Ms. Enrique Rebaza Villacorta</h4><span>Jefe de Formación Continua</span></div>
+        </div>
+        <div class="leader-card anim-slide-up" style="animation-delay:.1s">
+          <div class="lc-icon"><i class="fas fa-user-edit"></i></div>
+          <div><h4>Ms. Rafael Estela Paredes</h4><span>Secretaría Académica</span></div>
+        </div>
+        <div class="leader-card anim-slide-up" style="animation-delay:.15s">
+          <div class="lc-icon"><i class="fas fa-laptop-code"></i></div>
+          <div><h4>Dr. Noe Sánchez Heredia</h4><span>Soporte Técnico</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== INVESTMENT / PRICING =========== -->
+  <section id="inversion" class="section investment">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inversión</span>
+        <h2 class="section-title">Elige tu <span class="gradient-text">Plan de Pago</span></h2>
+        <p class="section-sub">Accede a 400 horas de formación de élite en IA educativa con la mejor relación costo-beneficio de la región</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan Contado -->
+        <div class="pricing-card anim-slide-up">
+          <div class="pc-header">
+            <span class="pc-tag">Pago Único</span>
+            <h3>Contado</h3>
+            <div class="pc-price">
+              <span class="pc-currency">S/</span>
+              <span class="pc-amount">350</span>
+            </div>
+            <p class="pc-desc">Pago único al momento de inscripción</p>
+          </div>
+          <ul class="pc-features">
+            <li><i class="fas fa-check-circle"></i> 5 Módulos completos (400 horas)</li>
+            <li><i class="fas fa-check-circle"></i> 25 créditos MINEDU</li>
+            <li><i class="fas fa-check-circle"></i> Certificaciones progresivas</li>
+            <li><i class="fas fa-check-circle"></i> Acceso a materiales digitales</li>
+            <li><i class="fas fa-check-circle"></i> Portafolio de prompts</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Ahorro de S/ 50 vs cuotas</strong></li>
+          </ul>
+          <a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb"
+             class="btn-primary" target="_blank" rel="noopener">
+            <i class="fas fa-bolt"></i> Inscribirme con descuento
+          </a>
+        </div>
+
+        <!-- Plan Cuotas - DESTACADO -->
+        <div class="pricing-card featured anim-slide-up" style="animation-delay:.1s">
+          <div class="pc-badge"><i class="fas fa-star"></i> Más Elegido</div>
+          <div class="pc-header">
+            <span class="pc-tag">Fraccionado</span>
+            <h3>Cuotas</h3>
+            <div class="pc-price">
+              <span class="pc-currency">S/</span>
+              <span class="pc-amount">80</span>
+              <span class="pc-freq">/módulo</span>
+            </div>
+            <p class="pc-desc">5 cuotas de S/ 80 (S/ 400 total)</p>
+          </div>
+          <ul class="pc-features">
+            <li><i class="fas fa-check-circle"></i> 5 Módulos completos (400 horas)</li>
+            <li><i class="fas fa-check-circle"></i> 25 créditos MINEDU</li>
+            <li><i class="fas fa-check-circle"></i> Certificaciones progresivas</li>
+            <li><i class="fas fa-check-circle"></i> Acceso a materiales digitales</li>
+            <li><i class="fas fa-check-circle"></i> Portafolio de prompts</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Paga por módulo completado</strong></li>
+          </ul>
+          <a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb"
+             class="btn-primary" target="_blank" rel="noopener">
+            <i class="fas fa-rocket"></i> Inscribirme ahora
+          </a>
+        </div>
+
+        <!-- Incluye -->
+        <div class="pricing-card includes anim-slide-up" style="animation-delay:.2s">
+          <div class="pc-header">
+            <span class="pc-tag">Todo incluye</span>
+            <h3>¿Qué obtienes?</h3>
+          </div>
+          <ul class="pc-features includes-list">
+            <li><i class="fas fa-laptop-code"></i> Plataforma Office 365 gratuita</li>
+            <li><i class="fas fa-robot"></i> Acceso a herramientas de IA educativa</li>
+            <li><i class="fas fa-file-pdf"></i> Materiales en PDF y videos</li>
+            <li><i class="fas fa-users"></i> Comunidad de docentes</li>
+            <li><i class="fas fa-user-astronaut"></i> Custom GPT personalizado</li>
+            <li><i class="fas fa-chalkboard-teacher"></i> Clases en vivo + grabaciones</li>
+            <li><i class="fas fa-headset"></i> Soporte técnico durante el programa</li>
+            <li><i class="fas fa-award"></i> Certificados válidos MINEDU</li>
+          </ul>
+          <div class="guarantee-box">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+              <strong>Certificación garantizada</strong>
+              <span>Aprobando todos los módulos con nota ≥ 14</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="pricing-note"><i class="fas fa-info-circle"></i> Los precios son referenciales. Para información oficial sobre costos, contacta directamente a la institución o accede al formulario de inscripción.</p>
+    </div>
+  </section>
+
+  <!-- =========== FAQ =========== -->
+  <section id="faq" class="section faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Preguntas Frecuentes</span>
+        <h2 class="section-title">¿Tienes <span class="gradient-text">Dudas?</span></h2>
+        <p class="section-sub">Encuentra respuestas a las preguntas más comunes sobre el diplomado</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-list">
+          <div class="faq-item anim-slide-up">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿Necesito conocimientos previos de IA?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>No. El diplomado está diseñado para docentes de todos los niveles. Comenzamos desde los fundamentos de la IA y avanzamos progresivamente. Lo único que necesitas es disposición para aprender y una computadora con conexión a internet.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-slide-up" style="animation-delay:.05s">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿Qué modalidad tiene el diplomado?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Es 100% virtual y sincrónico. Las clases son de lunes a viernes de 7:30 pm a 9:30 pm mediante plataforma Office 365 (Microsoft Teams). También contarás con materiales asincrónicos y acceso a grabaciones de las sesiones.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-slide-up" style="animation-delay:.1s">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿El certificado es reconocido por el MINEDU?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sí. El diplomado otorga 25 créditos y 400 horas académicas, reconocidos por el Ministerio de Educación del Perú para concursos de contratación, ascensos en la carrera pública magisterial y otros procesos docentes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-slide-up" style="animation-delay:.15s">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿Puedo obtener certificados por módulo?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sí. El sistema de certificación es progresiva: al completar cada módulo con nota aprobatoria (≥13) recibes tu certificado de ese módulo. Al finalizar todos y el proyecto integrador, obtienes el diploma completo con 25 créditos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-slide-up" style="animation-delay:.2s">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿Cuántos participantes hay por grupo?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>El grupo está limitado a <strong>50 participantes</strong> para garantizar atención personalizada y calidad en el proceso de aprendizaje. Por ello se recomienda inscribirse con anticipación para asegurar tu cupo.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-slide-up" style="animation-delay:.25s">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿A qué docentes está dirigido?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Está dirigido a docentes de todos los niveles educativos (inicial, primaria, secundaria y educación superior) de La Libertad y regiones vecinas del Perú. También pueden participar profesionales vinculados al sector educativo.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-slide-up" style="animation-delay:.3s">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿Qué herramientas de IA aprenderé a usar?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Trabajarás con ChatGPT, Gemini, Copilot, DALL·E, Canva IA, herramientas de automatización educativa, y aprenderás a crear tu propio Custom GPT. También se abordan herramientas para evaluación, creación de materiales y análisis de datos educativos.</p>
+            </div>
+          </div>
+
+          <div class="faq-item anim-slide-up" style="animation-delay:.35s">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>¿Cómo me inscribo?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Haz clic en el botón <strong>"Inscríbete Ahora"</strong> en cualquier parte de esta página. Serás redirigido al formulario oficial de inscripción alojado en Notion. Completa tus datos y sigue las instrucciones para confirmar tu matrícula.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-contact-card anim-slide-up" style="animation-delay:.2s">
+          <div class="fcc-icon"><i class="fas fa-comment-dots"></i></div>
+          <h3>¿Aún tienes preguntas?</h3>
+          <p>Contáctanos directamente y te respondemos a la brevedad posible.</p>
+          <div class="fcc-options">
+            <a href="mailto:enieto@eesppindoamerica.edu.pe" class="fcc-btn email">
+              <i class="fas fa-envelope"></i> Enviar correo
+            </a>
+            <a href="https://wa.me/51999999999?text=Hola,%20quiero%20información%20sobre%20el%20Diplomado%20en%20IA%20de%20EESPP%20Indoamérica"
+               class="fcc-btn whatsapp" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+          <div class="fcc-hours">
+            <i class="fas fa-clock"></i>
+            <span>Atención: Lun – Vie · 8:00 am – 6:00 pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== REGISTRATION CTA =========== -->
+  <section id="inscripcion" class="section registration">
+    <div class="container">
+      <div class="reg-card anim-slide-up">
+        <div class="reg-left">
+          <span class="section-tag light">¡No pierdas tu lugar!</span>
+          <h2>Cupos Limitados: <span>50 participantes</span></h2>
+          <p>Únete a la primera cohorte de docentes líderes en IA educativa de La Libertad y regiones vecinas.</p>
+
+          <div class="reg-details">
+            <div class="rd-item"><i class="fas fa-calendar-alt"></i><div><span>Inicio</span><strong>6 de Abril, 2026</strong></div></div>
+            <div class="rd-item"><i class="fas fa-calendar-check"></i><div><span>Término</span><strong>8 de Mayo, 2026</strong></div></div>
+            <div class="rd-item"><i class="fas fa-moon"></i><div><span>Horario</span><strong>7:30 pm – 9:30 pm</strong></div></div>
+            <div class="rd-item"><i class="fas fa-laptop"></i><div><span>Modalidad</span><strong>100% Virtual</strong></div></div>
+          </div>
+
+          <a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb"
+             class="btn-primary large" target="_blank" rel="noopener">
+            <i class="fas fa-rocket"></i> Inscríbete Ahora
+          </a>
+          <p class="reg-note">Al hacer clic serás redirigido al formulario oficial de inscripción</p>
+        </div>
+        <div class="reg-right">
+          <div class="reg-icons-grid">
+            <div class="ri-item"><i class="fas fa-brain"></i><span>IA</span></div>
+            <div class="ri-item"><i class="fas fa-chalkboard-teacher"></i><span>Docencia</span></div>
+            <div class="ri-item"><i class="fas fa-certificate"></i><span>Certificación</span></div>
+            <div class="ri-item"><i class="fas fa-laptop-code"></i><span>Digital</span></div>
+            <div class="ri-item"><i class="fas fa-users"></i><span>Comunidad</span></div>
+            <div class="ri-item"><i class="fas fa-lightbulb"></i><span>Innovación</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CONTACT =========== -->
+  <section id="contacto" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Tienes preguntas?</span>
+        <h2 class="section-title">Información de <span class="gradient-text">Contacto</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-list anim-slide-up">
+          <div class="ci-item"><div class="ci-icon"><i class="fas fa-building"></i></div><div><h4>Institución</h4><p>Escuela de Educación Superior Pedagógica Pública Indoamérica</p></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Ubicación</h4><p>Trujillo, La Libertad, Perú</p></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Correo</h4><a href="mailto:enieto@eesppindoamerica.edu.pe">enieto@eesppindoamerica.edu.pe</a></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fas fa-globe"></i></div><div><h4>Sitio Web</h4><a href="https://eesppindoamerica.edu.pe/" target="_blank" rel="noopener">eesppindoamerica.edu.pe</a></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fas fa-file-alt"></i></div><div><h4>Formulario de Inscripción</h4><a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb" target="_blank" rel="noopener">Acceder al formulario oficial</a></div></div>
+        </div>
+        <div class="contact-cta-card anim-slide-up" style="animation-delay:.1s">
+          <div class="ccc-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>¡Formemos juntos el futuro de la educación!</h3>
+          <p>La EESPP Indoamérica invita a los docentes de La Libertad y regiones vecinas a ser parte de esta experiencia transformadora en IA educativa.</p>
+          <a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb"
+             class="btn-primary" target="_blank" rel="noopener">
+            <i class="fas fa-paper-plane"></i> Quiero más información
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <i class="fas fa-brain"></i>
+            <div><span>EESPP</span><small>INDOAMÉRICA</small></div>
+          </div>
+          <p>Escuela de Educación Superior Pedagógica Pública "Indoamérica" – Trujillo, La Libertad, Perú</p>
+          <p class="footer-tagline">"Formando Docentes para la Era Digital"</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#modulos">Módulos</a></li>
+            <li><a href="#metodologia">Metodología</a></li>
+            <li><a href="#certificacion">Certificación</a></li>
+            <li><a href="#docente">Docente</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-program">
+          <h4>El Diplomado</h4>
+          <ul>
+            <li><i class="fas fa-clock"></i> 400 Horas Académicas</li>
+            <li><i class="fas fa-star"></i> 25 Créditos MINEDU</li>
+            <li><i class="fas fa-laptop"></i> 100% Virtual</li>
+            <li><i class="fas fa-calendar"></i> Inicio: 6 Abr 2026</li>
+            <li><i class="fas fa-users"></i> 50 cupos disponibles</li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h4>Contacto</h4>
+          <p><i class="fas fa-envelope"></i> enieto@eesppindoamerica.edu.pe</p>
+          <p><i class="fas fa-globe"></i> eesppindoamerica.edu.pe</p>
+          <a href="https://enieto.notion.site/31a52bca7c55808bb046df89d4bc48bb"
+             class="btn-footer" target="_blank" rel="noopener">
+            Inscríbete Ahora
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EESPP Indoamérica – Diplomado en Inteligencia Artificial Aplicada a la Educación | Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="scroll-top" aria-label="Subir">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/51999999999?text=Hola,%20quiero%20información%20sobre%20el%20Diplomado%20en%20IA%20de%20EESPP%20Indoamérica"
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">¡Escríbenos!</span>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

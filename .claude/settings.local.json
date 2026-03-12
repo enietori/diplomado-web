@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \":*)",
+      "Bash(python 2)",
+      "Bash(1:*)",
+      "Bash(ls -la *.pdf)",
+      "Bash(dir \"C:\\\\Users\\\\Elier\\\\OneDrive\\\\Escritorio\\\\web-diplomado\")",
+      "Bash(dir \"C:\\\\Users\\\\Elier\\\\OneDrive\\\\Escritorio\\\\web-diplomado\" /b)",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\Elier\\\\OneDrive\\\\Escritorio\\\\web-diplomado\")",
+      "Bash(Select-Object Name)"
+    ]
+  }
+}

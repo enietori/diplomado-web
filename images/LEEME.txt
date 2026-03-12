@@ -1,0 +1,16 @@
+CARPETA DE IMÁGENES DEL SITIO WEB
+===================================
+
+Coloca aquí los siguientes archivos:
+
+1. logo.png
+   - El logo oval de EESPP Indoamérica (la imagen que compartiste en el chat)
+   - Renómbralo exactamente como: logo.png
+
+2. foto-docente.jpeg
+   - La foto de Dr. Elier Nieto Rivas (la foto profesional en traje)
+   - Renómbrala exactamente como: foto-docente.jpeg
+
+IMPORTANTE:
+- Los nombres deben ser exactamente iguales (sin mayúsculas, sin espacios)
+- Una vez colocados los archivos, haz commit y push a GitHub

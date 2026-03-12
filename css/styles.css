@@ -219,6 +219,13 @@ ul { list-style: none; }
 .nav-brand { display: flex; align-items: center; }
 .brand-logo { display: flex; align-items: center; gap: 10px; }
 
+.brand-img-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0,212,255,.3));
+}
+
 .logo-icon {
   width: 40px; height: 40px;
   background: var(--gradient);
@@ -1093,7 +1100,7 @@ ul { list-style: none; }
 .faculty-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; flex-shrink: 0; }
 
 .faculty-avatar {
-  width: 140px; height: 140px;
+  width: 160px; height: 160px;
   background: var(--gradient);
   border-radius: 50%;
   display: flex;
@@ -1102,6 +1109,14 @@ ul { list-style: none; }
   font-size: 3.5rem;
   color: rgba(255,255,255,.85);
   box-shadow: 0 0 0 4px rgba(0,212,255,.2), 0 0 40px rgba(0,212,255,.15);
+  overflow: hidden;
+}
+
+.faculty-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .faculty-badge-wrap { display: flex; flex-direction: column; gap: 6px; align-items: center; }
@@ -1818,10 +1833,10 @@ ul { list-style: none; }
   color: var(--cyan);
 }
 
-.fcc-btn.whatsapp {
-  background: rgba(37,211,102,.12);
-  border: 1px solid rgba(37,211,102,.3);
-  color: #25d366;
+.fcc-btn.telegram {
+  background: rgba(34,158,217,.12);
+  border: 1px solid rgba(34,158,217,.3);
+  color: #229ED9;
 }
 
 .fcc-hours {
@@ -1840,34 +1855,34 @@ ul { list-style: none; }
 
 
 /* ============================================================
-   WHATSAPP FLOAT BUTTON
+   TELEGRAM FLOAT BUTTON
    ============================================================ */
-.whatsapp-float {
+.telegram-float {
   position: fixed;
   bottom: 90px;
   right: 24px;
   width: 56px; height: 56px;
-  background: #25d366;
+  background: #229ED9;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.6rem;
   color: #fff;
-  box-shadow: 0 4px 20px rgba(37,211,102,.5);
+  box-shadow: 0 4px 20px rgba(34,158,217,.5);
   z-index: 999;
   transition: transform .3s, box-shadow .3s;
   animation: wa-pulse 2.5s infinite;
 }
 
-.whatsapp-float:hover {
+.telegram-float:hover {
   transform: scale(1.12);
-  box-shadow: 0 6px 28px rgba(37,211,102,.7);
+  box-shadow: 0 6px 28px rgba(34,158,217,.7);
   color: #fff;
 }
 
 .wa-tooltip {
   position: absolute;
   right: 68px;
-  background: #25d366;
+  background: #229ED9;
   color: #fff;
   font-size: .8rem;
   font-weight: 600;
@@ -1880,14 +1895,14 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
-.whatsapp-float:hover .wa-tooltip {
+.telegram-float:hover .wa-tooltip {
   opacity: 1;
   transform: translateX(0);
 }
 
 @keyframes wa-pulse {
-  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,.5); }
-  50% { box-shadow: 0 4px 30px rgba(37,211,102,.85), 0 0 0 10px rgba(37,211,102,.1); }
+  0%, 100% { box-shadow: 0 4px 20px rgba(34,158,217,.5); }
+  50% { box-shadow: 0 4px 30px rgba(34,158,217,.85), 0 0 0 10px rgba(34,158,217,.1); }
 }
 
 @media (max-width: 480px) {
